@@ -35,4 +35,8 @@ public Station(int stationNumber) {
        people.remove(index);
    }
 
+   public String toString() {
+    return "Station " + stationNumber + " Passengers: " + people.size();
+   }
+
 }
