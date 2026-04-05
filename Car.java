@@ -111,8 +111,6 @@ public class Car{
         return "Initial station: " + initialStation + " Current station: " + currentStation + " Number of People: " + people.size();
     }
 
-
-
 }
 
 
