@@ -21,7 +21,7 @@ public Passenger(int startStation, int destination) {
     direction = startStation < destination;
     ID = globalID++;
 }
-}
+
 
 
 public int getStartStation() {
@@ -46,6 +46,14 @@ public int getID() {
 
 public boolean getDirection() {
     return direction;
+}
+
+public String toString() {
+    return "Passenger " + ID + " Start: " + startStation + " Destination: " + destination + " Current: " + location;
+
+}
+
+
 }
 
 
