@@ -9,11 +9,11 @@ public class Car{
     private int currentStation;
     private boolean moveable;
     private int revenue;
-    private int distanceTraceled;
+    private int distanceTraveled;
 
     //Constructors
 
-    public Car(int myInitialStation, int my Destination) {
+    public Car(int myInitialStation, int myDestination) {
 
         initialStation = myInitialStation;
         destination = myDestination;
@@ -106,6 +106,9 @@ public class Car{
             currentStation--;
         }
         distanceTraveled++;
+    }
+    public String toString() {
+        return "Initial station: " + initialStation + " Current station: " + currentStation + " Number of People: " + people.size();
     }
 
 
