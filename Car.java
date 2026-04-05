@@ -24,6 +24,36 @@ public class Car{
         forward = initialStation < destination;
         moveable = true;
     }
+    
+//Getters
+
+
+   public int getInitialStation() {
+       return initialStation;
+   }
+
+
+   public int getDestination() {
+
+
+       return destination;
+   }
+  
+   public int getStationNumber() {
+       return currentStation;
+   }
+
+
+   public boolean getMoveable() {
+       return moveable;
+   }
+
+
+   public boolean getDirection() {
+       return forward;
+   }
+}
+
 
 
   
