@@ -24,7 +24,7 @@ public class Car{
         forward = initialStation < destination;
         moveable = true;
     }
-    
+
 //Getters
 
 
@@ -52,6 +52,24 @@ public class Car{
    public boolean getDirection() {
        return forward;
    }
+   
+   public ArrayList<Passenger> getPeople() {
+    return people;
+   }
+
+   public int getDistanceTraveled() {
+    return distanceTraveled;
+   }
+
+   public boolean isAtDestination() {
+    return currentStation == destination;
+
+   }
+
+   //Mutators
+
+   
+
 }
 
 
