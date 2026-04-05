@@ -68,7 +68,36 @@ public class Car{
 
    //Mutators
 
-   
+   public void setStationNumber(int stationNumber) {
+    currentStation = stationNumber;
+   }
+
+   public void changeMoveability(boolean status) {
+    moveable = status;
+
+}
+
+    public void pickup(Passenger p) {
+        if(people.size() < 3) {people.add(p);
+
+        }
+    }
+    public Passenger dropoff(int pos) {
+        if (pos != -1) {
+            Passenger temp = people.get(pos);
+            people.remove(pos);
+            return temp;
+        }
+        return null;
+    }
+
+    public void remove(Passenger p) {
+        people.remove(p);
+    }
+
+    //Behavior
+
+
 
 }
 
