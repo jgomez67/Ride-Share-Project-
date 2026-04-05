@@ -17,10 +17,43 @@ public Passenger(int startStation, int destination) {
     this.destination = destination;
     this.originalDestination = destination;
     this.location = startStation;
-direction = startStation < destination;
-ID = globalID++;
 
+    direction = startStation < destination;
+    ID = globalID++;
 }
+}
+
+
+public int getStartStation() {
+    return startStation;
+}
+
+public int getDestination() {
+    return destination;
+}
+
+public int getOriginalDestination() {
+    return originalDestination;
+}
+
+public int getLocation() {
+    return location;
+}
+
+public int getID() {
+    return ID;
+}
+
+public boolean getDirection() {
+    return direction;
+}
+
+
+
+
+
+
+
 
 
 
