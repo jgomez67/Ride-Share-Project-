@@ -97,6 +97,17 @@ public class Car{
 
     //Behavior
 
+    public void move() {
+        if(currentStation < destination) {
+            currentStation++;
+
+        }
+        else if (currentStation > destination) {
+            currentStation--;
+        }
+        distanceTraveled++;
+    }
+
 
 
 }
