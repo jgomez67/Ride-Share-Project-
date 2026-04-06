@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 import java.util.Random;
 public class Road{
@@ -9,6 +11,20 @@ public class Road{
     private int totalPassengers;
 
     //constructors
+    
+    public Road() {
+        cars = new ArrayList<>();
+        stations = new ArrayList<>();
+        rand = new Random();
+        deliveredPassengers = 0;
+        totalPassengers = 0;
+    }
+    public ArrayList<Car> getCars() {
+        return cars;
+    }
+    public ArrayList<Station> getStations() {
+        return stations;
+    }
     
     }
 }
