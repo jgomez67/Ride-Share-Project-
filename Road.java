@@ -25,6 +25,13 @@ public class Road{
     public ArrayList<Station> getStations() {
         return stations;
     }
+    public int getDeliveredPassengeres() {
+        return deliveredPassengers;
+    }
+    public int getTotalPassengers() {
+        return totalPassengers;
+
+    }
     
     }
 }
