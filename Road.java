@@ -65,5 +65,31 @@ public class Road{
         }
     }
 
+    //board them
+
+    public void pickupPassengers()
+ {
+    for(Car car : cars) {
+        Station currentStation = stations.get(car.getStationNumber());
+        ArrayList<Passenger> waiting = currentStation.getPeople();
+        ArrayList<Passenger> toRemove = new ArrayList<>();
+
+        for(Passenger p : waiting) {
+            if(car.getPeople().size() < 3 && p.getDirection()) == car.getDirection()){
+                car.pickup(p);
+                toRemove.add(p);
+            }
+        }
+        for(Passenger p: toRemove) {
+            currentStation.removePerson(p);
+        }
+    }
+ }
+
+ 
+
+
+
+
     }
 }
