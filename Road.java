@@ -32,6 +32,26 @@ public class Road{
         return totalPassengers;
 
     }
+
+    //methods
+
+    public void addStations() {
+        for(int i = 0; i< 32; i++) {
+            stations.add(new Station(i));
+        }
+    }
+
+    public void addCars(int num) {
+        for(int i = 0; i< num; i++){
+            int start =rand.nextInt(32);
+            int end = rand.nextInt(32);
+            while(end == start){
+                end = rand.nextInt(32);
+            }
+            cars.add(new Car(start, end));
+        }
+    }
     
+
     }
 }
