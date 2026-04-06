@@ -51,7 +51,19 @@ public class Road{
             cars.add(new Car(start, end));
         }
     }
-    
+
+    public void addPassengers(int num){
+        totalPassengers = num;
+        for(int i = 0; i< num; i++){
+            int start = rand.nextInt(32);
+            int end = rand.nextInt(32);
+        while (end == start) {
+            end = rand.nextInt(32);
+        }
+        Passenger p = new Passenger(start, end);
+        stations.get(start).spawnPerson(p);
+        }
+    }
 
     }
 }
