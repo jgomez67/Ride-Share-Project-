@@ -85,11 +85,60 @@ public class Road{
         }
     }
  }
+//drop off passengers
+public void moveCars(){
+        ArrayList<Car> carsToRemove = new ArrayList<>();
+        for (Car car : cars){
+            car.move();
 
+            ArrayList<Passenger> passengerInCar = new ArrayList<>(car.getPeople());
+            for (Passenger p : PassengersInCar()) {
+                if(p.getOriginalDestination() == car.getStationNumber()) {
+                    car.remove(p);
+                    deliveredPassengers++;
+                 }
+                }
+                if(car.isAtDestinationO()){
+                    Station currentStation = stations.get(car.getStationNumber());
+                    ArrayList<Passenger> leftoverPassengers = new ArrayList<>(car.getPeople());
+
+
+                    for (Passenger P : leftoverPassengers)
+ {
+    currentStation.spawnPerson(p);
+    car.remove(p);
+
+ }  
+
+ carsToRemove.add(Car);
+              }
+
+                }
+                for (Car car : carsToRemove) {
+                    cars.remove(Car);
+                }
+            } 
+            public void runSimulation(){
+                pickupPassengers();
+
+                while (!cars.isEmpty()){
+                    moveCars();
+                    pickupPassengers();
+                }
+            }
+
+            public double getPercentDelivered(){
+                if (totalPassengers == 0) {
+                    return 0.0;
+                }
+                return (double) deliveredPassengers / totalPassengers * 100;
+
+            }
+            public String toString() {
+              return "Cars: " + cars.size() + " Stations: " + stations.size() +
+               " Delivered: " + deliveredPassengers + "/" + totalPassengers;
+    }
+}  
  
 
 
-
-
-    }
-}
