@@ -18,7 +18,7 @@ public class Runner {
 
         road.addPassengers(numPassengers);
 
-        System.out.println("Scenario: " + numCars + " cars, " + numPassengers + " passengers");
+        System.out.println("Scenario: " + numCars + " cars, " + numPassengers + " passengers"); // displays the current simulation setup
 
         System.out.println("Starting simulation...");
 
